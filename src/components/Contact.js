@@ -7,6 +7,7 @@ import {
   faWhatsapp, 
   faYoutube 
 } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -42,6 +43,12 @@ function Contact() {
   };
 
   const socialLinks = [
+    {
+      name: 'Gmail',
+      icon: faEnvelope,
+      url: 'mailto:youremail@gmail.com', // Replace with your email
+      color: '#EA4335'
+    },
     {
       name: 'Instagram',
       icon: faInstagram,
@@ -132,12 +139,12 @@ function Contact() {
         </form>
       </div>
       
-      <div className="contact-info">
+      {/* <div className="contact-info">
         <h3>Contact Information</h3>
         <p>Email: your.email@example.com</p>
         <p>WhatsApp: +91 98765 43210</p>
         <p>Agent: John Doe Agency</p>
-      </div>
+      </div> */}
     </div>
   );
 }

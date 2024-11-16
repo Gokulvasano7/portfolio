@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import heroImage from '../images/gimage1.jpg';
 // import floatImage from '../images/float.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTheaterMasks, faFilm, faClock } from '@fortawesome/free-solid-svg-icons';
 
 function Home() {
   const touchStartX = useRef(null);
@@ -98,7 +100,34 @@ function Home() {
     position: 'relative'
   };
 
-  const videoUrl = "https://www.youtube.com/embed/FYj4iZc1rD0";
+  const videos = [
+    {
+      url: "https://www.youtube.com/embed/FYj4iZc1rD0",
+      title: "Featured Video 1"
+    },
+    {
+      url: "https://www.youtube.com/embed/g_xU8jJpVxw",
+      title: "Featured Video 2"
+    }
+  ];
+
+  const highlights = [
+    {
+      number: "1+",
+      title: "Theatre Productions",
+      icon: faTheaterMasks
+    },
+    {
+      number: "4+",
+      title: "Short Films",
+      icon: faFilm
+    },
+    {
+      number: "3+",
+      title: "Years Experience",
+      icon: faClock
+    }
+  ];
 
   return (
     <div className="home-section">
@@ -111,18 +140,13 @@ function Home() {
       </div>
       
       <div className="highlights">
-        <div className="highlight-item">
-          <h3>15+</h3>
-          <p>Theatre Productions</p>
-        </div>
-        <div className="highlight-item">
-          <h3>8+</h3>
-          <p>Short Films</p>
-        </div>
-        <div className="highlight-item">
-          <h3>3+</h3>
-          <p>Years Experience</p>
-        </div>
+        {highlights.map((item, index) => (
+          <div key={index} className="highlight-card">
+            <FontAwesomeIcon icon={item.icon} className="highlight-icon" />
+            <h3>{item.number}</h3>
+            <p>{item.title}</p>
+          </div>
+        ))}
       </div>
 
       <div className="gallery-preview">
@@ -143,24 +167,20 @@ function Home() {
         </Link>
       </div>
       
-      <div className="showreel">
+      <div className="showreel-section">
         <h2>Featured Showreel</h2>
-        <div className="showreel-content">
-          <div className="video-container">
-            <iframe
-              width="100%"
-              height="500"
-              src={videoUrl}
-              title="Featured Showreel"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <div className="showreel-text">
-            <h1>My Acting Journey</h1>
-            <p>A glimpse into my theatrical performances and on-screen presence. This showreel highlights my versatility as an actor and my passion for bringing characters to life.</p>
-          </div>
+        <div className="video-grid">
+          {videos.map((video, index) => (
+            <div key={index} className="video-container">
+              <iframe
+                src={video.url}
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ))}
         </div>
       </div>
     </div>
