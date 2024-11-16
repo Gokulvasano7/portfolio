@@ -67,25 +67,30 @@
 }
 
 .hero {
-  position: relative;
+  position:relative;
   width: 100%;
   overflow: hidden;
   margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  padding: 1rem;
+  text-align: left;
+  padding: 2rem;
   background: transparent;
   border-radius: 8px;
   max-width: 800px;
-  margin-top: -110px;
+  margin: 6rem 0 0 5%;
+  margin-top: -75px;
+  margin-left: -50px;
 }
 
 .hero-content h1 {
-  font-size: 6rem;
+  font-size: 7rem;
   margin-bottom: 0.5rem;
   color: #007bff;
   text-shadow: 2px 2px 4px rgb(255, 255, 255);
@@ -96,7 +101,7 @@
   margin-bottom: 1.5rem;
   color: #333;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  margin-top: -10px;  
+  margin-top: -20px;  
 }
 
 .hero-content p {
@@ -358,35 +363,61 @@ button:hover {
   .hero {
     height: auto;
     min-height: 70vh;
+    background-position: 80% center !important;
   }
   
   .hero-content {
-    padding: 4rem 1rem;
+    margin-top: 6rem;
+    padding: 1rem;
+    text-align: center;
+    margin-left: 10px;
   }
   
   .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   
   .hero-content h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
   }
   
   .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 0 1rem;
   }
   
   .highlights {
-    flex-direction: column;
+    padding: 2rem 1rem;
     gap: 2rem;
+  }
+  
+  .highlight-item h3 {
+    font-size: 2rem;
+  }
+  
+  .highlight-item p {
+    font-size: 1rem;
   }
   
   .nav-links {
     gap: 1.5rem;
   }
   
+  .nav-links a {
+    font-size: 1rem;
+  }
+  
   .preview-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .preview-item {
+    margin-bottom: 1rem;
+  }
+  
+  .preview-item img {
+    height: 200px;
   }
   
   .portfolio-grid {
@@ -523,3 +554,44 @@ button:hover {
     margin-top: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .gallery-preview {
+    padding: 2rem 1rem;
+  }
+  
+  .preview-grid {
+    gap: 1rem;
+  }
+  
+  .preview-item {
+    margin-bottom: 1rem;
+  }
+  
+  .preview-item img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-item:hover,
+  .gallery-item:hover,
+  .preview-item:hover {
+    transform: none;
+  }
+  
+  .portfolio-item:active,
+  .gallery-item:active,
+  .preview-item:active {
+    transform: scale(0.98);
+  }
+  
+  button:hover {
+    transform: none;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+}
+
