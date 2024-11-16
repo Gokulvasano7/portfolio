@@ -1,4 +1,12 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faInstagram, 
+  faLinkedinIn, 
+  faTwitter, 
+  faWhatsapp, 
+  faYoutube 
+} from '@fortawesome/free-brands-svg-icons';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -33,8 +41,60 @@ function Contact() {
     window.open(whatsappUrl, '_blank');
   };
 
+  const socialLinks = [
+    {
+      name: 'Instagram',
+      icon: faInstagram,
+      url: 'https://instagram.com/yourusername',
+      color: '#E1306C'
+    },
+    {
+      name: 'LinkedIn',
+      icon: faLinkedinIn,
+      url: 'https://linkedin.com/in/yourusername',
+      color: '#0077B5'
+    },
+    {
+      name: 'Twitter',
+      icon: faTwitter,
+      url: 'https://twitter.com/yourusername',
+      color: '#1DA1F2'
+    },
+    {
+      name: 'WhatsApp',
+      icon: faWhatsapp,
+      url: `https://wa.me/${whatsappNumber}`,
+      color: '#25D366'
+    },
+    {
+      name: 'YouTube',
+      icon: faYoutube,
+      url: 'https://youtube.com/c/yourusername',
+      color: '#FF0000'
+    }
+  ];
+
   return (
     <div className="contact-section">
+      <div className="social-media-container">
+        <h2>Connect With Me</h2>
+        <div className="social-buttons">
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-button"
+              style={{'--hover-color': social.color}}
+            >
+              <FontAwesomeIcon icon={social.icon} />
+              <span>{social.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
       <h1>Contact Me</h1>
       <div className="contact-form">
         <form onSubmit={handleSubmit}>
