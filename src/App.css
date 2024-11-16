@@ -93,7 +93,7 @@
   font-size: 7rem;
   margin-bottom: 0.5rem;
   color: #007bff;
-  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .hero-content h2 {
@@ -592,6 +592,92 @@ button:hover {
   
   button:active {
     transform: scale(0.95);
+  }
+}
+
+/* Small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .portfolio-grid,
+  .gallery-grid,
+  .preview-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .showreel-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .video-container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-form {
+    padding: 1rem;
+  }
+}
+
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .highlight-item {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .nav-links a:hover,
+  .portfolio-item:hover,
+  .gallery-item:hover,
+  .preview-item:hover {
+    transform: none;
+  }
+  
+  .nav-links a:active,
+  .portfolio-item:active,
+  .gallery-item:active,
+  .preview-item:active {
+    transform: scale(0.98);
+  }
+}
+
+/* High-resolution screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-content h1 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .contact-form button,
+  .gallery-preview {
+    display: none;
   }
 }
 

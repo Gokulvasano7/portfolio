@@ -16,3 +16,29 @@ html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling only if user doesn't prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Improve touch interactions */
+@media (hover: none) {
+  * {
+    cursor: default !important;
+  }
+  
+  a, button {
+    cursor: pointer !important;
+    touch-action: manipulation;
+  }
+}

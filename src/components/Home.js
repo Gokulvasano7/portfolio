@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import heroImage from '../images/gimage1.jpg';
 // import floatImage from '../images/float.png';
 
 function Home() {
+  const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
+
   useEffect(() => {
     const homeSection = document.querySelector('.home-section');
     
@@ -28,6 +31,36 @@ function Home() {
     
     return () => {
       homeSection.removeEventListener('click', createRipple);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleTouchStart = (e) => {
+      // Store touch start position
+      const touch = e.touches[0];
+      touchStartX.current = touch.clientX;
+      touchStartY.current = touch.clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      if (!touchStartX.current || !touchStartY.current) return;
+
+      const touch = e.touches[0];
+      const deltaX = touchStartX.current - touch.clientX;
+      const deltaY = touchStartY.current - touch.clientY;
+
+      // Prevent vertical scrolling when swiping horizontally
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        e.preventDefault();
+      }
+    };
+
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
     };
   }, []);
 
