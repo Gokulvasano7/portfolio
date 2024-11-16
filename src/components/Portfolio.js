@@ -1,8 +1,34 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faGraduationCap, faLocationDot, faLanguage, faRulerVertical, faTheaterMasks } from '@fortawesome/free-solid-svg-icons';
 
 function Portfolio() {
+  const personalInfo = [
+    { icon: faUser, label: "Name", value: "Gokul Vasan" },
+    { icon: faUser, label: "Age", value: "22" },
+    { icon: faGraduationCap, label: "Qualification", value: "B.E - ECE" },
+    { icon: faLocationDot, label: "Native", value: "Palani, Tamil Nadu" },
+    { icon: faTheaterMasks, label: "Skills", value: "Acting" },
+    { icon: faLanguage, label: "Languages", value: "Tamil and Telugu" },
+    { icon: faRulerVertical, label: "Height", value: "163cm (5.4 feet)" }
+  ];
+
   return (
     <div className="portfolio-section">
+      <h1>About Me</h1>
+      
+      <div className="personal-info-container">
+        {personalInfo.map((info, index) => (
+          <div key={index} className="info-card">
+            <FontAwesomeIcon icon={info.icon} className="info-icon" />
+            <div className="info-content">
+              <h3>{info.label}</h3>
+              <p>{info.value}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
       <h1>My Work</h1>
       <div className="portfolio-grid">
         <div className="portfolio-item">
