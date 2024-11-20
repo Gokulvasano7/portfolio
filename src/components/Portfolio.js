@@ -48,28 +48,25 @@ function Portfolio() {
       <h1>My Work</h1>
       <div className="portfolio-grid">
         <div className="portfolio-item">
-          <h3>Theatre</h3>
+          <h3>Flim</h3>
           <ul>
-            <li>Lead Role in "The Merchant of Venice" (2023)</li>
-            <li>Supporting Role in "A Midsummer Night's Dream" (2022)</li>
-            <li>Lead Role in "The Glass Menagerie" (2021)</li>
+            <li>Side Role in "Chithha" (2023)</li>
+            <li>Supporting Role as "Ponni's Lover" </li>
           </ul>
         </div>
         
         <div className="portfolio-item">
-          <h3>Film</h3>
+          <h3>Short Film</h3>
           <ul>
-            <li>Lead Role in "The Journey" - Short Film (2023)</li>
-            <li>Supporting Role in "Echoes" - Independent Film (2022)</li>
+            <li>Lead Role in "Kadhal Solla Bayamen" - Short Film (2022)</li>
+            <li>The hero, a boy lost in his imagination, weaves his love into the fabric of dreams.</li>
           </ul>
         </div>
         
         <div className="portfolio-item">
-          <h3>Training</h3>
+          <h3>Loading . . </h3>
           <ul>
-            <li>Method Acting Workshop - Lee Strasberg Institute</li>
-            <li>Voice & Speech Training - Drama School</li>
-            <li>Movement for Actors - Theatre Academy</li>
+            <li> coming soon . .  </li>
           </ul>
         </div>
       </div>
