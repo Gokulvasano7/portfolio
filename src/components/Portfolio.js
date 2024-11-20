@@ -1,16 +1,30 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faGraduationCap, faLocationDot, faLanguage, faRulerVertical, faTheaterMasks } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faUser, 
+  faGraduationCap, 
+  faLocationDot, 
+  faLanguage, 
+  faRulerVertical, 
+  faTheaterMasks,
+  faPalette,  // for skin tone
+  faEye,      // for eye color
+  faBrush,
+  faCakeCandles
+} from '@fortawesome/free-solid-svg-icons';
 
 function Portfolio() {
   const personalInfo = [
     { icon: faUser, label: "Name", value: "Gokul Vasan" },
-    { icon: faUser, label: "Age", value: "22" },
+    { icon: faCakeCandles, label: "Age", value: "22" },
     { icon: faGraduationCap, label: "Qualification", value: "B.E - ECE" },
     { icon: faLocationDot, label: "Native", value: "Palani, Tamil Nadu" },
     { icon: faTheaterMasks, label: "Skills", value: "Acting" },
     { icon: faLanguage, label: "Languages", value: "Tamil and Telugu" },
-    { icon: faRulerVertical, label: "Height", value: "163cm (5.4 feet)" }
+    { icon: faRulerVertical, label: "Height", value: "163cm (5.4 feet)" },
+    { icon: faBrush, label: "Hair Color", value: "Black" },
+    { icon: faEye, label: "Eye Color", value: "Black" },
+    { icon: faPalette, label: "Skin Tone", value: "Sandal Brown" }
   ];
 
   return (

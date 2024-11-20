@@ -15,9 +15,32 @@ import image12 from '../images/image12.jpg';
 import image13 from '../images/image13.jpg';
 import image14 from '../images/image14.jpg';
 import image15 from '../images/image15.jpg';
+import ImageViewer from './ImageViewer';
 
 
 function Gallery() {
+  const [selectedIndex, setSelectedIndex] = React.useState(null);
+
+  const handleImageClick = (index) => {
+    setSelectedIndex(index);
+  };
+
+  const handleClose = () => {
+    setSelectedIndex(null);
+  };
+
+  const handleNext = () => {
+    setSelectedIndex((prev) => 
+      prev === galleryItems.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const handlePrevious = () => {
+    setSelectedIndex((prev) => 
+      prev === 0 ? galleryItems.length - 1 : prev - 1
+    );
+  };
+
   const galleryItems = [
     {
       image: image1,
@@ -101,17 +124,25 @@ function Gallery() {
       <h1>Photo Gallery</h1>
       <div className="gallery-grid">
         {galleryItems.map((item, index) => (
-          <div key={index} className="gallery-item">
-            <a href={item.image} target="_blank" rel="noopener noreferrer">
-              <img src={item.image} alt={item.title} />
-            </a>
-            <div className="gallery-item-info">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
+          <div 
+            key={index} 
+            className="gallery-item" 
+            onClick={() => handleImageClick(index)}
+          >
+            <img src={item.image} alt={item.title} />
           </div>
         ))}
       </div>
+
+      {selectedIndex !== null && (
+        <ImageViewer
+          images={galleryItems}
+          currentIndex={selectedIndex}
+          onClose={handleClose}
+          onNext={handleNext}
+          onPrevious={handlePrevious}
+        />
+      )}
     </div>
   );
 }
