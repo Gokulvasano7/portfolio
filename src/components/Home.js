@@ -76,8 +76,8 @@ function Home() {
     {
       src: featured1,
       title: "Chithha",
-      year: "2024",
-      description: "Side role  - Lover of ponni"
+      year: "2023",
+      description: "Side role  - Ponni's lover"
     },
     {
       src: featured2,
@@ -122,7 +122,7 @@ function Home() {
 
   const highlights = [
     {
-      number: "1+",
+      number: "1",
       title: "Theatre Productions",
       icon: faTheaterMasks
     },
