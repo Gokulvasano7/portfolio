@@ -75,21 +75,21 @@ function Home() {
   const previewImages = [
     {
       src: featured1,
-      title: "The Merchant of Venice",
-      year: "2023",
-      description: "Lead Role - Shylock"
+      title: "Chithha",
+      year: "2024",
+      description: "Side role  - Lover of ponni"
     },
     {
       src: featured2,
-      title: "The Journey",
-      year: "2023",
+      title: "Kadhal Solla Bayamen",
+      year: "2022",
       description: "Short Film - Lead Role"
     },
     {
       src: featured3,
-      title: "A Midsummer Night's Dream",
-      year: "2022",
-      description: "Supporting Role"
+      // title: "A Midsummer Night's Dream",
+      // year: "2022",
+      // description: "Supporting Role"
     }
   ];
 
