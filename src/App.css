@@ -8,13 +8,14 @@
 
 /* Navigation Styles */
 .navbar {
-  background-color: rgba(248, 249, 250, 0.95);
+  background-color: rgba(248, 249, 250, 0.7);
   padding: 1rem;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
 }
 
 .nav-links {
@@ -186,6 +187,10 @@
 
 /* Portfolio Section */
 .portfolio-section {
+  position: relative;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: none;
   padding: 6rem 2rem 2rem;
 }
 
@@ -227,6 +232,10 @@
 
 /* Gallery Section */
 .gallery-section {
+  position: relative;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: none;
   padding: 6rem 2rem 2rem;
 }
 
@@ -331,6 +340,10 @@
 
 /* Contact Section */
 .contact-section {
+  position: relative;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: none;
   padding: 6rem 2rem 2rem;
 }
 
@@ -1141,6 +1154,110 @@
     user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
+  }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated-blob {
+  filter: blur(100px);
+  pointer-events: none;
+  mix-blend-mode: lighten;
+  will-change: transform;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .animated-blob {
+    width: 300px !important;
+    height: 300px !important;
+    left: calc(50% - 150px) !important;
+    top: calc(50% - 150px) !important;
+    filter: blur(80px);
+  }
+}
+
+.portfolio .animated-blob {
+  mix-blend-mode: soft-light;
+}
+
+.gallery .animated-blob {
+  mix-blend-mode: color-dodge;
+}
+
+.contact .animated-blob {
+  mix-blend-mode: screen;
+}
+
+.portfolio-section,
+.gallery-section,
+.contact-section {
+  position: relative;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: none;
+}
+
+@media (max-width: 768px) {
+  .animated-blob {
+    width: 300px !important;
+    height: 300px !important;
+    filter: blur(80px);
+  }
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.171);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #333;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  z-index: 10;
+}
+
+.footer span {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer span:hover {
+  opacity: 1;
+}
+
+.footer .creator {
+  font-weight: 500;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer .creator:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1rem;
   }
 }
 

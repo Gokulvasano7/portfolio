@@ -5,6 +5,12 @@ import heroImage from '../images/gimage1.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTheaterMasks, faFilm, faClock } from '@fortawesome/free-solid-svg-icons';
 
+// Import your images
+import featured1 from '../images/featured1.jpg';  // Add your image paths
+import featured2 from '../images/featured2.jpg';
+import featured3 from '../images/featured3.jpg';
+
+
 function Home() {
   const touchStartX = useRef(null);
   const touchStartY = useRef(null);
@@ -68,19 +74,22 @@ function Home() {
 
   const previewImages = [
     {
-      src: 'https://via.placeholder.com/400x300',
-      title: 'Photo 1',
-      year: '2023'
+      src: featured1,
+      title: "The Merchant of Venice",
+      year: "2023",
+      description: "Lead Role - Shylock"
     },
     {
-      src: 'https://via.placeholder.com/400x300',
-      title: 'Photo 2',
-      year: '2022'
+      src: featured2,
+      title: "The Journey",
+      year: "2023",
+      description: "Short Film - Lead Role"
     },
     {
-      src: 'https://via.placeholder.com/400x300',
-      title: 'Photo 3',
-      year: '2023'
+      src: featured3,
+      title: "A Midsummer Night's Dream",
+      year: "2022",
+      description: "Supporting Role"
     }
   ];
 

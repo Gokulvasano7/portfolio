@@ -16,6 +16,7 @@ import image13 from '../images/image13.jpg';
 import image14 from '../images/image14.jpg';
 import image15 from '../images/image15.jpg';
 import ImageViewer from './ImageViewer';
+import AnimatedBackground from './AnimatedBackground';
 
 
 function Gallery() {
@@ -121,6 +122,7 @@ function Gallery() {
 
   return (
     <div className="gallery-section">
+      <AnimatedBackground type="gallery" />
       <h1>Photo Gallery</h1>
       <div className="gallery-grid">
         {galleryItems.map((item, index) => (

@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

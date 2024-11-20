@@ -8,6 +8,7 @@ import {
   faYoutube 
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import AnimatedBackground from './AnimatedBackground';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -46,19 +47,19 @@ function Contact() {
     {
       name: 'Gmail',
       icon: faEnvelope,
-      url: 'mailto:youremail@gmail.com', // Replace with your email
+      url: 'mailto:gokulvasan77@gmail.com', // Replace with your email
       color: '#EA4335'
     },
     {
       name: 'Instagram',
       icon: faInstagram,
-      url: 'https://instagram.com/yourusername',
+      url: 'https://instagram.com/gokul_vasan',
       color: '#E1306C'
     },
     {
       name: 'LinkedIn',
       icon: faLinkedinIn,
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://linkedin.com/in/gokulvasan7',
       color: '#0077B5'
     },
     {
@@ -83,6 +84,7 @@ function Contact() {
 
   return (
     <div className="contact-section">
+      <AnimatedBackground type="contact" />
       <div className="social-media-container">
         <h2>Connect With Me</h2>
         <div className="social-buttons">

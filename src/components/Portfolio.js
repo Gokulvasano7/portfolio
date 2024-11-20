@@ -12,6 +12,7 @@ import {
   faBrush,
   faCakeCandles
 } from '@fortawesome/free-solid-svg-icons';
+import AnimatedBackground from './AnimatedBackground';
 
 function Portfolio() {
   const personalInfo = [
@@ -29,6 +30,7 @@ function Portfolio() {
 
   return (
     <div className="portfolio-section">
+      <AnimatedBackground type="portfolio" />
       <h1>About Me</h1>
       
       <div className="personal-info-container">
