@@ -127,12 +127,6 @@ function Gallery() {
       image: image15,
       title: "Backstage Moments",
       description: "Theatre Life, 2023"
-    },
-    {
-      image:image16
-    },
-    {
-      image:image17
     }
   ];
 
