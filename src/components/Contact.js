@@ -53,7 +53,7 @@ function Contact() {
     {
       name: 'Instagram',
       icon: faInstagram,
-      url: 'https://instagram.com/gokul_vasan',
+      url: 'https://instagram.com/gokul_vasan_',
       color: '#E1306C'
     },
     {
