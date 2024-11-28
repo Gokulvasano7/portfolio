@@ -23,6 +23,8 @@ import image20 from '../images/image20.jpg';
 import image21 from '../images/image21.jpg';
 import image22 from '../images/image22.jpg';
 import image23 from '../images/image23.jpg';
+import image24 from '../images/image24.jpg';
+import image25 from '../images/image25.jpg';
 import ImageViewer from './ImageViewer';
 import AnimatedBackground from './AnimatedBackground';
 
