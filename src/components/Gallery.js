@@ -15,14 +15,14 @@ import image12 from '../images/image12.jpg';
 import image13 from '../images/image13.jpg';
 import image14 from '../images/image14.jpg';
 import image15 from '../images/image15.jpg';
-import image15 from '../images/image16.jpg';
-import image15 from '../images/image17.jpg';
-import image15 from '../images/image18.jpg';
-import image15 from '../images/image19.jpg';
-import image15 from '../images/image20.jpg';
-import image15 from '../images/image21.jpg';
-import image15 from '../images/image22.jpg';
-import image15 from '../images/image23.jpg';
+import image16 from '../images/image16.jpg';
+import image17 from '../images/image17.jpg';
+import image18 from '../images/image18.jpg';
+import image19 from '../images/image19.jpg';
+import image20 from '../images/image20.jpg';
+import image21 from '../images/image21.jpg';
+import image22 from '../images/image22.jpg';
+import image23 from '../images/image23.jpg';
 import ImageViewer from './ImageViewer';
 import AnimatedBackground from './AnimatedBackground';
 
@@ -128,6 +128,9 @@ function Gallery() {
     },
     {
       image:image16
+    },
+    {
+      image:image17
     }
   ];
 
