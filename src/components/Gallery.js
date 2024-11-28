@@ -55,78 +55,93 @@ function Gallery() {
   const galleryItems = [
     {
       image: image1,
-      title: "Performance at National Theatre",
-      description: "Lead role in Hamlet, 2023"
+
     },
     {
       image: image2,
-      title: "Behind the Scenes",
-      description: "Film shoot for 'The Journey'"
+
     },
     {
       image: image3,
-      title: "Stage Performance",
-      description: "A Midsummer Night's Dream"
+
     },
     {
       image: image4,
-      title: "Theatre Workshop",
-      description: "Method Acting Session, 2023"
+
     },
     {
       image: image5,
-      title: "Film Premiere",
-      description: "Red Carpet Event, 2023"
+
     },
     {
       image: image6,
-      title: "Rehearsal Session",
-      description: "Preparing for Romeo & Juliet"
+
     },
     {
       image: image7,
-      title: "Voice Training",
-      description: "Vocal Workshop, 2023"
+
     },
     {
       image: image8,
-      title: "Stage Combat",
-      description: "Fight Choreography Session"
+
     },
     {
       image: image9,
-      title: "Character Study",
-      description: "Preparing for Macbeth"
+   
     },
     {
       image: image10,
-      title: "Film Set",
-      description: "On Location Shoot, 2023"
+
     },
     {
       image: image11,
-      title: "Drama Workshop",
-      description: "Group Performance Session"
+
     },
     {
       image: image12,
-      title: "Costume Fitting",
-      description: "Period Drama Preparation"
+
     },
     {
       image: image13,
-      title: "Script Reading",
-      description: "New Project Development"
+
     },
     {
       image: image14,
-      title: "Dance Practice",
-      description: "Movement Workshop"
+
     },
     {
       image: image15,
-      title: "Backstage Moments",
-      description: "Theatre Life, 2023"
+
+    },
+    {
+      image: image16
+    },
+    {
+      image: image17
+    },
+    {
+      image: image18
+    },
+    {
+      image: image19
+    },
+    {
+      image: image20
+    },
+    {
+      image: image21
+    },
+    {
+      image: image22
+    },
+    {
+      image: image23
+    },
+    {
+      image: image24
+    },
+    {
+      image: image25
     }
   ];
 

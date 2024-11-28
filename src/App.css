@@ -753,7 +753,8 @@
   gap: 2rem;
   box-shadow: 20px 20px 60px rgba(0,0,0,0.1),
               -20px -20px 60px rgba(255,255,255,0.8);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+  transition: transform 0.2s ease;
   border: 1px solid rgba(255, 255, 255, 0.4);
   overflow: hidden;
   position: relative;
@@ -801,15 +802,15 @@
 }
 
 .info-card:hover {
-  transform: translateY(-15px) rotateX(5deg);
+  /* transform: translateY(-15px) rotateX(5deg); */
   box-shadow: 25px 25px 75px rgba(0,0,0,0.15),
               -25px -25px 75px rgba(255,255,255,0.9);
 }
 
 .info-card:hover .info-icon {
   background: rgba(255, 255, 255, 0.9);
-  color: #333;
-  transform: scale(1.1) rotate(5deg);
+  color: #222222;
+  /* transform: scale(0) rotate(0deg); */
 }
 
 .info-card:hover .info-content h3,
