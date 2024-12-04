@@ -25,6 +25,9 @@ import image22 from '../images/image22.jpg';
 import image23 from '../images/image23.jpg';
 import image24 from '../images/image24.jpg';
 import image25 from '../images/image25.jpg';
+import image26 from '../images/image26.jpg';
+import image27 from '../images/image27.jpg';
+import image28 from '../images/image28.jpg';
 import ImageViewer from './ImageViewer';
 import AnimatedBackground from './AnimatedBackground';
 
@@ -142,6 +145,15 @@ function Gallery() {
     },
     {
       image: image25
+    },
+    {
+      image: image26
+    },
+    {
+      image: image27
+    },
+    {
+      image: image28
     }
   ];
 
