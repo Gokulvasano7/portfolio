@@ -48,9 +48,9 @@ function Portfolio() {
       <h1>My Work</h1>
       <div className="portfolio-grid">
         <div className="portfolio-item">
-          <h3>Flim</h3>
+          <h3>Film</h3>
           <ul>
-            <li>Side Role in "Chithha" (2023)</li>
+            <li>Main Role in "Chithha" (2023)</li>
             <li>Supporting Role as "Ponni's Lover" </li>
           </ul>
         </div>
