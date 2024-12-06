@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// src/components/ImageViewer.js
+import React, { useState, useCallback } from 'react'; // Removed useEffect import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -6,16 +7,16 @@ function ImageViewer({ images, currentIndex, onClose, onNext, onPrevious }) {
   const [touchStart, setTouchStart] = useState(null);
   const [isSwiping, setIsSwiping] = useState(false);
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = useCallback((e) => { // {{ edit_1 }} - Wrapped in useCallback
     if (e.key === 'Escape') onClose();
     if (e.key === 'ArrowRight') onNext();
     if (e.key === 'ArrowLeft') onPrevious();
-  };
+  }, [onClose, onNext, onPrevious]); // Added dependencies
 
   React.useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [handleKeyDown]); // No change needed here
 
   const handleTouchStart = (e) => {
     setTouchStart(e.touches[0].clientX);
@@ -83,4 +84,4 @@ function ImageViewer({ images, currentIndex, onClose, onNext, onPrevious }) {
   );
 }
 
-export default ImageViewer; 
+export default ImageViewer;

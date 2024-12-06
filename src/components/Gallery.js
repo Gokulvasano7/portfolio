@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback, Suspense } from 'react';
+import { debounce } from 'lodash';
 // Import your images
 import image1 from '../images/image1.jpg';
 import image2 from '../images/image2.jpg';
@@ -31,13 +32,10 @@ import image28 from '../images/image28.jpg';
 import ImageViewer from './ImageViewer';
 import AnimatedBackground from './AnimatedBackground';
 
+const LazyImage = React.lazy(() => import('./ResponsiveImage'));
 
 function Gallery() {
-  const [selectedIndex, setSelectedIndex] = React.useState(null);
-
-  const handleImageClick = (index) => {
-    setSelectedIndex(index);
-  };
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   const handleClose = () => {
     setSelectedIndex(null);
@@ -157,6 +155,25 @@ function Gallery() {
     }
   ];
 
+  // Create a debounced function using useCallback
+  const debouncedHandleImageClick = useCallback(
+    debounce((index) => {
+      setSelectedIndex(index);
+    }, 300),
+    [] // No dependencies, so it will be created once
+  );
+
+  const handleImageClick = (index) => {
+    debouncedHandleImageClick(index);
+  };
+
+  // Cleanup the debounced function on unmount
+  useEffect(() => {
+    return () => {
+      debouncedHandleImageClick.cancel();
+    };
+  }, [debouncedHandleImageClick]); // Add it to the dependency array
+
   return (
     <div className="gallery-section">
       <AnimatedBackground type="gallery" />
@@ -168,7 +185,9 @@ function Gallery() {
             className="gallery-item" 
             onClick={() => handleImageClick(index)}
           >
-            <img src={item.image} alt={item.title} />
+            <Suspense fallback={<div>Loading...</div>}>
+              <LazyImage src={item.image} alt={`Gallery item ${index + 1}`} />
+            </Suspense>
           </div>
         ))}
       </div>
