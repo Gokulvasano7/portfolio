@@ -8,7 +8,7 @@ import {
   faYoutube 
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import AnimatedBackground from './AnimatedBackground';
+// import AnimatedBackground from './AnimatedBackground';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -84,7 +84,7 @@ function Contact() {
 
   return (
     <div className="contact-section">
-      <AnimatedBackground type="contact" />
+      {/* <AnimatedBackground type="contact" /> */}
       <div className="social-media-container">
         <h2>Connect With Me</h2>
         <div className="social-buttons">
