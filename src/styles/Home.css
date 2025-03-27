@@ -53,7 +53,8 @@
 .hero-cta {
   margin-top: 2.5rem;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .primary-btn, .secondary-btn {
@@ -298,24 +299,12 @@
 
   .hero-cta {
     flex-direction: column;
+    justify-content: center;
   }
 
   .primary-btn, .secondary-btn {
     width: 100%;
     justify-content: center;
-  }
-
-  .highlight-card {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .works-grid1 {
-    grid-template-columns: 1fr;
-  }
-
-  .video-grid {
-    grid-template-columns: 1fr;
   }
 }
 

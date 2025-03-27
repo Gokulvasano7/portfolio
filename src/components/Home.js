@@ -2,10 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  // faTheaterMasks, faFilm, faClock, 
-  faPlay, faArrowRight
-} from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import AnimatedBackground from './AnimatedBackground';
 import '../styles/Home.css';
 
@@ -13,8 +10,6 @@ import '../styles/Home.css';
 import heroImage from '../images/gimage1.jpg';
 
 function Home() {
-
-
   return (
     <div className="home-section">
       <AnimatedBackground type="home" />
@@ -60,9 +55,6 @@ function Home() {
           >
             <Link to="/gallery" className="primary-btn">
               View Gallery <FontAwesomeIcon icon={faArrowRight} />
-            </Link>
-            <Link to="/showreel" className="secondary-btn">
-              <FontAwesomeIcon icon={faPlay} /> Watch Showreel
             </Link>
           </motion.div>
         </div>
